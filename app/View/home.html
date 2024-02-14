@@ -1,0 +1,13 @@
+<section>	
+	<h1>Produtos:</h1>
+
+	{% for produto in produtos %}
+		<article>
+			<header>
+				<h2><a href="http://localhost/estudo/myloja-rc/?pagina=prod&id={{produto.id}}">{{produto.nome}}</a></h2>
+			</header>
+
+			<p>{{produto.descricao}}</p>
+		</article>
+	{% endfor %}
+</section>

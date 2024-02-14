@@ -1,2 +1,2 @@
-# myloja-rc
-Sistema para subir produtos com avaliação 
+# blog-rc
+Sistema de postagens php com mvc

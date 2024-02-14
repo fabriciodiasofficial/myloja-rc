@@ -1,0 +1,21 @@
+<h1>Gerenciador dos Produtos</h1>
+
+<a href="http://localhost/estudo/myloja-rc/?pagina=admin&metodo=create">Novo Produto</a><br><br>
+<hr>
+<table border="2">
+	<tr>
+		<th>Id</th>
+		<th>Nome</th>
+		<th>Alterar</th>
+		<th>Deletar</th>
+	</tr>
+
+	{% for produto in produtos %}
+	<tr>
+		<th>{{produto.id}}</th>
+		<th>{{produto.nome}}</th>
+		<th><a href="http://localhost/estudo/myloja-rc/?pagina=admin&metodo=change&id={{produto.id}}">Alteração</a></th>
+		<th><a href="http://localhost/estudo/myloja-rc/?pagina=admin&metodo=delete&id={{produto.id}}">Deletar</a></th>
+	</tr>
+	{% endfor %}
+</table>

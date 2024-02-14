@@ -1,0 +1,15 @@
+<h1>Alterar Produto</h1>
+
+<form method="post" action="?pagina=admin&metodo=update">
+	<span>Nome do Produto</span><br>
+	<input type="text" name="nome" value="{{nome}}"><br><br>
+
+	<span>Preço</span><br>
+	<input type="text" name="preco" value="{{preco}}"><br><br>
+
+	<span>Descrição</span><br>
+	<textarea name="descricao" cols="25" rows="5">{{descricao}}</textarea><br><br>
+
+	<input type="hidden" name="id" value="{{id}}">
+	<input type="submit" value="Alterar">
+</form>

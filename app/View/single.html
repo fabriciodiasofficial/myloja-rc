@@ -1,0 +1,45 @@
+<section>	
+	<article>
+		<header>
+			<p align="right"><a href="http://localhost/estudo/myloja-rc/">Voltar</a></p>
+			<h2>{{nome}}</h2>
+		</header>
+		<br>
+		<p>
+		<b>Descrição:</b> {{descricao}} <br><br>
+		<b>Preço:</b> {{preco}}
+		</p>
+
+		<br><hr><br>
+
+		<form method="post" action="http://localhost/estudo/myloja-rc/?pagina=prod&metodo=addAvaliacao">
+			<span>Nome:</span><br>
+			<input type="text" name="nome"><br><br>
+
+			<span>Nota:</span><br>
+			<!-- <input type="text" name="nota"><br><br> -->
+			<select name="nota">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+
+			<input type="hidden" name="id" value="{{id}}">
+
+			<input type="submit" value="Enviar">
+		</form>
+		<br><br>
+
+		{% if avaliacoes == false %}
+			<p>Nenhuma avaliação encontrada nesse produto</p>
+		{% else %}
+			{% for avaliacao in avaliacoes %}
+				<h3>{{avaliacao.nome}}</h3>
+				<p>{{avaliacao.nota}}</p>
+				<br>
+			{% endfor %}
+		{% endif %}
+	</article>
+</section>

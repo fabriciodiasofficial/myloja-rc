@@ -1,0 +1,14 @@
+{
+    "name": "lenovo/myloja-rc",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\MylojaRc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fabricio"
+        }
+    ],
+    "require": {}
+}
